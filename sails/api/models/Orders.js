@@ -26,7 +26,7 @@ module.exports = {
   		},
   		orderItems: {
   			collection: 'OrderItems',
-  			via:'owner'
+  			via:'orders'
   		},
   		summary: {
   			type:'text'

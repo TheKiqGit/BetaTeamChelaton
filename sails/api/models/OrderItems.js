@@ -10,7 +10,7 @@ module.exports = {
   	autoUpdatedAt: false,
 	tableName:'orders_items',
   	attributes: {
-  		owner: {
+  		orders: {
   			model:'Orders'
   		},
   		product: {

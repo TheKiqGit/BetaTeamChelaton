@@ -7,6 +7,8 @@
 
 module.exports = {
 	tableName: 'Notification_type',
+	autoCreatedAt: false,
+    autoUpdatedAt: false,
  	attributes: {
  		tiempo: {
  			type: 'integer',
