@@ -6,9 +6,44 @@
  */
 
 module.exports = {
-
-  attributes: {
-
-  }
+	tableName: 'orders',
+  	attributes: {
+  		user: {
+  			model:'Users',
+  			unique:true
+  		},
+  		address: {
+  			model: 'Address'
+  			unique:true
+  		},
+  		total: {
+  			type:'float',
+  			required:true
+  		}
+  		status: {
+  			type:'integer',
+  			required:true,
+  			enum: [0, 1, 2]
+  		},
+  		createdAt: {
+  			type: 'date',
+  			column_name: 'createdAt',
+  			defaultsTo: function (){
+  				return new Date();
+  			}
+  		},
+  		updatedAt: {
+  			type: 'date',
+  			column_name: 'updatedAt',
+  			defaultsTo: function (){
+  				return new Date();
+  			},
+  		summary: {
+  			type: 'text'
+  			required:true,
+  		},
+  		autoUpdatedAt:false,
+  		autoCreatedAt:false
+  	}
 };
 
