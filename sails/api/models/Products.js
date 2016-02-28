@@ -6,39 +6,37 @@
  */
 
 module.exports = {
-  attributes: {
-
-  	tableName: 'products',
-  	id: {
-  		type: 'integer',
-  		unique: true,
-  		primaryKey: true
-  	},
-  	name: {
-  		type: 'string',
-  		defaultsTo: 'cervezaTmp'
-  	},
-  	price: {
-  		type: 'float',
-  		defaultsTo: 0
-  	},
-  	type: {
-  		type: 'string',
-  		defaultsTo: 'ambar',
-  		enum : ['ambar', 'oscura', 'clara', 'lager']
-  	},
-  	createdAt: {
-  		type: 'date',
-  		defaultsTo: function (){
-  			return new Date().toLocaleString();
-  		}
-  	},
-  	updatedAt: {
-  		type: 'date',
-  		defaultsTo: function (){
-  			return new Date().toLocaleString();
-  		}
+	tableName:'products',
+  	attributes: {
+  		name: {
+  			type: 'string',
+  			defaultsTo: 'cervezaTmp'
+  		},
+  		price: {
+  			type: 'float',
+  			defaultsTo: 0.0
+  		},
+  		type: {
+  			type: 'string',
+  			defaultsTo: 'ambar',
+  			enum : ['ambar', 'oscura', 'clara', 'lager']
+  		},
+  		createdAt: {
+  			type: 'date',
+  			column_name: 'createdAt',
+  			defaultsTo: function (){
+  				return new Date();
+  			}
+  		},
+  		updatedAt: {
+  			type: 'date',
+  			column_name: 'updatedAt',
+  			defaultsTo: function (){
+  				return new Date();
+  			},
+  		autoCreatedAt: false,
+  		autoUpdatedAT: false
+  		},
   	}
-  }
 };
 
