@@ -7,7 +7,10 @@
 
 module.exports = {
 	tableName:'person',
+	autoCreatedAt: false,
+    autoUpdatedAt: false,
   	attributes: {
+  		//Properties
   		name : {
   			type: 'string',
   			required: true
@@ -18,35 +21,25 @@ module.exports = {
   		},
   		phone: {
   			type: 'integer',
-  			required: true
+  			required: true,
+  			minLength: 10
   		},
   		middlename: {
-  			type: 'string'
-  		},
-  		user: {
-  			model: 'Users',
-  			unique: true
+  			type: 'string',
+  			defaultsTo:''
   		},
   		birthday: {
   			type: 'date',
   			required: true
   		},
-  		createdAt: {
-  			type: 'date',
-  			column_name: 'createdAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
+  		//Associations
+  		user: {
+  			model: 'Users'
   		},
-  		updatedAt: {
-  			type: 'date',
-  			column_name: 'updatedAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  		//Class methods
+    	getFullName: function (){
+      		return this.name + ' ' + this.lastName;
+    	}
   	}
 };
 

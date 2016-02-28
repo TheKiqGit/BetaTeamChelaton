@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+	autoCreatedAt: false,
+    autoUpdatedAt: false,
 	tableName: 'location',
   	attributes: {
   		lat: {
@@ -13,23 +15,7 @@ module.exports = {
   		},
   		lng: {
   			type: 'string'
-  		},
-  		createdAt: {
-  			type: 'date',
-  			column_name: 'createdAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		updatedAt: {
-  			type: 'date',
-  			column_name: 'updatedAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  		}
   	}
 };
 

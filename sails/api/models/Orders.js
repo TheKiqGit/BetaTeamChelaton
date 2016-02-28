@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+	autoCreatedAt: false,
+  	autoUpdatedAt: false,
 	tableName: 'orders',
   	attributes: {
   		user: {
@@ -17,37 +19,32 @@ module.exports = {
   			unique: true
   		},
   		total: {
-  			type:'float',
-  			required:true
-  		}
+  			type:'float'
+  		},
   		status: {
-  			type:'integer',
-  			required:true
+  			type:'integer'
   		},
   		orderItems: {
   			collection: 'OrderItems',
   			via:'owner'
   		},
+  		summary: {
+  			type:'text'
+  		},
   		createdAt: {
   			type: 'date',
-  			column_name: 'createdAt',
+  			columnName: 'createdAt',
   			defaultsTo: function (){
   				return new Date();
   			}
   		},
   		updatedAt: {
   			type: 'date',
-  			column_name: 'updatedAt',
+  			columnName: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
   			}
-  		},
-  		summary: {
-  			type: 'text',
-  			required:true
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  		}
   	}
 };
 

@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+	autoCreatedAt: false,
+  	autoUpdatedAt: false,
 	tableName:'users',
   	attributes: {
   		email: {
@@ -21,25 +23,22 @@ module.exports = {
   			required: true
   		},
   		person: {
-  			collection: 'Person',
-  			via: 'owner'
+  			model: 'Person'
   		},
   		createdAt: {
   			type: 'date',
-  			column_name: 'createdAt',
+  			columnName: 'createdAt',
   			defaultsTo: function (){
   				return new Date();
   			}
   		},
   		updatedAt: {
   			type: 'date',
-  			column_name: 'updatedAt',
+  			columnName: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
   			}
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  		}
   	}
 };
 

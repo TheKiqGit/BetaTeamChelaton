@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+	autoCreatedAt: false,
+  	autoUpdatedAt: false,
 	tableName: 'adress',
   	attributes: {
   		street: {
@@ -32,24 +34,8 @@ module.exports = {
   			type: 'string'
   		},
   		location: {
-  			model:'location'
-  		},
-  		createdAt: {
-  			type: 'date',
-  			column_name: 'createdAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		updatedAt: {
-  			type: 'date',
-  			column_name: 'updatedAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  			model:'Location'
+  		}
   	}
 };
 

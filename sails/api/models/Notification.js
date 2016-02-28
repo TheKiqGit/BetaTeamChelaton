@@ -6,9 +6,16 @@
  */
 
 module.exports = {
-
-  attributes: {
-
-  }
+	tableName: 'Notification_type',
+ 	attributes: {
+ 		tiempo: {
+ 			type: 'integer',
+ 			required: true
+ 		},
+ 		description: {
+ 			type: 'string',
+ 			required: true
+ 		}
+ 	}
 };
 

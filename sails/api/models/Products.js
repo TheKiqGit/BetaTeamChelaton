@@ -7,7 +7,10 @@
 
 module.exports = {
 	tableName:'products',
+	autoCreatedAt: false,
+  	autoUpdatedAt: false,
   	attributes: {
+
   		name: {
   			type: 'string',
   			defaultsTo: 'cervezaTmp'
@@ -23,20 +26,17 @@ module.exports = {
   		},
   		createdAt: {
   			type: 'date',
-  			column_name: 'createdAt',
+  			columnName: 'createdAt',
   			defaultsTo: function (){
   				return new Date();
   			}
   		},
   		updatedAt: {
   			type: 'date',
-  			column_name: 'updatedAt',
+  			columnName: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
   			}
-  		},
-  		autoCreatedAt: false,
-  		autoUpdatedAT: false
   		}
   	}
 };

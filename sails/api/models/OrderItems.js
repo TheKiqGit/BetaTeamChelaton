@@ -6,9 +6,11 @@
  */
 
 module.exports = {
+	autoCreatedAt: false,
+  	autoUpdatedAt: false,
 	tableName:'orders_items',
   	attributes: {
-  		order: {
+  		owner: {
   			model:'Orders'
   		},
   		product: {
@@ -17,23 +19,7 @@ module.exports = {
   		quantity: {
   			type:'integer',
   			defaultsTo:1
-  		},
-  		createdAt: {
-  			type: 'date',
-  			column_name: 'createdAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		updatedAt: {
-  			type: 'date',
-  			column_name: 'updatedAt',
-  			defaultsTo: function (){
-  				return new Date();
-  			}
-  		},
-  		autoUpdatedAt:false,
-  		autoCreatedAt:false
+  		}
   	}
 };
 
