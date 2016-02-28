@@ -1,26 +1,38 @@
 /**
- * Users.js
+ * Address.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-	tableName:users,
+	tableName: 'adress',
   	attributes: {
-  		email: {
-  			required: true
-  		},
-  		facebook_token: {
+  		street: {
   			type: 'string',
-  			defaultsTo: ''
-  		},
-  		password: {
   			required: true
   		},
-  		person: {
-  			collection: 'Person',
-  			via: 'owner'
+  		colonia: {
+  			type: 'string',
+  			required: true
+  		},
+  		city: {
+  			type: 'string',
+  			required: true
+  		},
+  		state: {
+  			type: 'string',
+  			required: true
+  		},
+  		zipcode: {
+  			type: 'integer',
+  			required: true
+  		},
+  		number: {
+  			type: 'string'
+  		},
+  		location: {
+
   		},
   		createdAt: {
   			type: 'date',

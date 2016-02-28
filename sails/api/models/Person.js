@@ -1,26 +1,27 @@
 /**
- * Users.js
+ * Person.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-	tableName:users,
+	tableName:'person',
   	attributes: {
-  		email: {
-  			required: true
-  		},
-  		facebook_token: {
+  		name : {
   			type: 'string',
-  			defaultsTo: ''
-  		},
-  		password: {
   			required: true
   		},
-  		person: {
-  			collection: 'Person',
-  			via: 'owner'
+  		lastname: {
+  			type: 'string',
+  			required: true
+  		},
+  		phone: {
+  			type: 'integer',
+  			required: true
+  		},
+  		middlename: {
+  			type: 'string',
   		},
   		createdAt: {
   			type: 'date',

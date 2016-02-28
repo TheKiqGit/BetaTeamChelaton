@@ -1,26 +1,22 @@
 /**
- * Users.js
+ * OrderItems.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-	tableName:users,
+	tableName:'orders_items',
   	attributes: {
-  		email: {
-  			required: true
+  		order: {
+  			model:'Orders'
   		},
-  		facebook_token: {
-  			type: 'string',
-  			defaultsTo: ''
+  		product: {
+  			model:'Products'
   		},
-  		password: {
-  			required: true
-  		},
-  		person: {
-  			collection: 'Person',
-  			via: 'owner'
+  		quantity: {
+  			type:'integer',
+  			defaultsTo:1
   		},
   		createdAt: {
   			type: 'date',

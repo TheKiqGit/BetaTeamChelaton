@@ -1,26 +1,18 @@
 /**
- * Users.js
+ * Location.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-	tableName:users,
+	tableName: 'location'
   	attributes: {
-  		email: {
-  			required: true
+  		lat: {
+  			type:'string'
   		},
-  		facebook_token: {
-  			type: 'string',
-  			defaultsTo: ''
-  		},
-  		password: {
-  			required: true
-  		},
-  		person: {
-  			collection: 'Person',
-  			via: 'owner'
+  		lng: {
+  			type: 'string'
   		},
   		createdAt: {
   			type: 'date',

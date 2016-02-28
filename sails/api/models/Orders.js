@@ -25,6 +25,10 @@ module.exports = {
   			required:true,
   			enum: [0, 1, 2]
   		},
+  		orderItems: {
+  			collection: 'OrderItems',
+  			via:'owner';
+  		},
   		createdAt: {
   			type: 'date',
   			column_name: 'createdAt',
