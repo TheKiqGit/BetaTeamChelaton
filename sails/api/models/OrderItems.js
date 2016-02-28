@@ -30,7 +30,8 @@ module.exports = {
   			column_name: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
-  			},
+  			}
+  		},
   		autoUpdatedAt:false,
   		autoCreatedAt:false
   	}

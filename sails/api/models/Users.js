@@ -6,9 +6,10 @@
  */
 
 module.exports = {
-	tableName:users,
+	tableName:'users',
   	attributes: {
   		email: {
+  			type: 'string',
   			required: true
   		},
   		facebook_token: {
@@ -16,6 +17,7 @@ module.exports = {
   			defaultsTo: ''
   		},
   		password: {
+  			type: 'string',
   			required: true
   		},
   		person: {
@@ -34,7 +36,8 @@ module.exports = {
   			column_name: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
-  			},
+  			}
+  		},
   		autoUpdatedAt:false,
   		autoCreatedAt:false
   	}

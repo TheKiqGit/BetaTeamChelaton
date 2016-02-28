@@ -32,7 +32,7 @@ module.exports = {
   			type: 'string'
   		},
   		location: {
-
+  			model:'location'
   		},
   		createdAt: {
   			type: 'date',
@@ -46,7 +46,8 @@ module.exports = {
   			column_name: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
-  			},
+  			}
+  		},
   		autoUpdatedAt:false,
   		autoCreatedAt:false
   	}

@@ -10,11 +10,11 @@ module.exports = {
   	attributes: {
   		user: {
   			model:'Users',
-  			unique:true
+  			unique: true
   		},
   		address: {
-  			model: 'Address'
-  			unique:true
+  			model: 'Address',
+  			unique: true
   		},
   		total: {
   			type:'float',
@@ -22,12 +22,11 @@ module.exports = {
   		}
   		status: {
   			type:'integer',
-  			required:true,
-  			enum: [0, 1, 2]
+  			required:true
   		},
   		orderItems: {
   			collection: 'OrderItems',
-  			via:'owner';
+  			via:'owner'
   		},
   		createdAt: {
   			type: 'date',
@@ -41,10 +40,11 @@ module.exports = {
   			column_name: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
-  			},
+  			}
+  		},
   		summary: {
-  			type: 'text'
-  			required:true,
+  			type: 'text',
+  			required:true
   		},
   		autoUpdatedAt:false,
   		autoCreatedAt:false

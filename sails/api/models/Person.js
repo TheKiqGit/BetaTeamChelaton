@@ -21,7 +21,15 @@ module.exports = {
   			required: true
   		},
   		middlename: {
-  			type: 'string',
+  			type: 'string'
+  		},
+  		user: {
+  			model: 'Users',
+  			unique: true
+  		},
+  		birthday: {
+  			type: 'date',
+  			required: true
   		},
   		createdAt: {
   			type: 'date',
@@ -35,7 +43,8 @@ module.exports = {
   			column_name: 'updatedAt',
   			defaultsTo: function (){
   				return new Date();
-  			},
+  			}
+  		},
   		autoUpdatedAt:false,
   		autoCreatedAt:false
   	}
